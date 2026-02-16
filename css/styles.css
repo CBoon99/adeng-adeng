@@ -15,8 +15,8 @@
     --palm: #15803d;
     --white: #ffffff;
     --text-dark: #0f172a;
-    --text-mid: #334155;
-    --text-light: #64748b;
+    --text-mid: #1e293b;
+    --text-light: #475569;
     
     /* Image filter for uniformity */
     --img-filter: brightness(1.02) contrast(1.05) saturate(1.1);
@@ -61,7 +61,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    color: var(--text-dark);
+    color: #1e293b;
     line-height: 1.6;
     background-color: var(--white);
     overflow-x: hidden;
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
-    color: var(--text-dark);
+    color: #0f172a;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -158,7 +158,7 @@ h4 {
 
 p {
     margin-bottom: var(--spacing-sm);
-    color: var(--text-mid);
+    color: #334155;
 }
 
 a {
@@ -201,7 +201,7 @@ ul {
 
 .section-subtitle {
     font-size: 1.125rem;
-    color: var(--text-mid);
+    color: #475569;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -283,10 +283,18 @@ ul {
 
 .logo-img {
     height: 50px;
+    max-width: 200px;
     width: auto;
     filter: none !important;
     border-radius: 0;
     display: block;
+}
+
+/* Limit all logo sizes to prevent blur */
+img[src*="Logo"],
+img[alt*="Logo"] {
+    max-width: 300px;
+    height: auto;
 }
 
 /* Hero Logo - Prominent */
@@ -304,6 +312,7 @@ ul {
 
 .hero-logo-img {
     height: 120px;
+    max-width: 300px;
     width: auto;
     filter: none !important;
     border-radius: 0;
@@ -345,6 +354,7 @@ ul {
 
 .section-logo-img {
     height: 60px;
+    max-width: 200px;
     width: auto;
     filter: none !important;
     border-radius: 0;
@@ -367,6 +377,7 @@ ul {
 
 .footer-logo .logo-img {
     height: 70px;
+    max-width: 250px;
     width: auto;
     margin-bottom: var(--spacing-sm);
     filter: none !important;
@@ -643,6 +654,14 @@ ul {
     margin-bottom: var(--spacing-sm);
 }
 
+.beach-bar-text p {
+    color: #475569;
+}
+
+.beach-bar-text .feature-list li {
+    color: #475569;
+}
+
 .beach-bar-cta {
     margin-top: var(--spacing-md);
 }
@@ -653,7 +672,7 @@ ul {
 
 .coming-soon-title {
     text-align: center;
-    color: var(--text-mid);
+    color: #1e293b;
     font-size: 1.5rem;
     margin-bottom: var(--spacing-lg);
     font-weight: 600;
@@ -795,9 +814,11 @@ ul {
     width: 100%;
 }
 
-.turtle-species li {
+.turtle-species li,
+.feature-list li,
+.culture-list li {
     margin-bottom: var(--spacing-xs);
-    color: var(--text-mid);
+    color: #334155;
     word-wrap: break-word;
 }
 
@@ -810,6 +831,10 @@ ul {
     font-style: italic;
     width: 100%;
     box-sizing: border-box;
+}
+
+.turtle-note p {
+    color: #475569;
 }
 
 .image-grid {
@@ -863,6 +888,10 @@ ul {
 .location-card h3 {
     color: var(--ocean-deep);
     margin-bottom: var(--spacing-sm);
+}
+
+.location-card p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* ============================================
@@ -940,6 +969,15 @@ ul {
     white-space: nowrap;
 }
 
+.menu-item-name {
+    color: #1e293b;
+}
+
+.menu-item-content p,
+.drink-item span:not(.price) {
+    color: #64748b;
+}
+
 .drinks-categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1001,6 +1039,18 @@ ul {
     font-style: italic;
 }
 
+.cidomo-note p {
+    color: #475569;
+}
+
+.cidomo-text p {
+    color: #475569;
+}
+
+.cidomo-features p {
+    color: #475569;
+}
+
 /* ============================================
    Diving Section
    ============================================ */
@@ -1010,6 +1060,7 @@ ul {
     max-width: 800px;
     margin: 0 auto var(--spacing-lg);
     font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .dive-sites {
@@ -1031,6 +1082,10 @@ ul {
     margin-bottom: var(--spacing-xs);
 }
 
+.dive-site-card p {
+    color: #475569;
+}
+
 .dive-site-depth {
     font-weight: 600;
     color: var(--ocean-mid);
@@ -1049,6 +1104,10 @@ ul {
 .diving-info h3 {
     color: var(--ocean-deep);
     margin-bottom: var(--spacing-sm);
+}
+
+.diving-info p {
+    color: #475569;
 }
 
 /* ============================================
@@ -1074,9 +1133,12 @@ ul {
     margin: var(--spacing-sm) 0;
 }
 
-.culture-list li {
-    margin-bottom: var(--spacing-xs);
-    color: var(--text-mid);
+.culture-text p {
+    color: #475569;
+}
+
+.culture-text h3 {
+    color: #0f172a;
 }
 
 /* ============================================
@@ -1142,8 +1204,13 @@ ul {
 }
 
 .route-details p {
-    color: var(--white);
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: var(--spacing-sm);
+}
+
+.getting-here-content p:not(.route-details p),
+.transport-card p {
+    color: #475569;
 }
 
 .route-details .highlight {
@@ -1172,7 +1239,7 @@ ul {
 }
 
 .getting-here-note p {
-    color: var(--text-dark);
+    color: #1e293b;
 }
 
 /* ============================================
@@ -1348,6 +1415,11 @@ ul {
     
     .hero-logo-img {
         height: 80px;
+        max-width: 250px;
+    }
+    
+    .section-logo-img {
+        max-width: 150px;
     }
     
     .hero::after {
@@ -1716,6 +1788,46 @@ ul {
     img {
         image-rendering: -webkit-optimize-contrast;
     }
+}
+
+/* ============================================
+   TEXT CONTRAST FIXES - Ensure all text is readable
+   ============================================ */
+
+/* All paragraphs on light backgrounds */
+section:not(.hero):not(.cidomo-section):not(.diving-section):not(.location-section) p {
+    color: #475569;
+}
+
+/* Lists on light backgrounds */
+section:not(.hero):not(.cidomo-section):not(.diving-section):not(.location-section) li {
+    color: #334155;
+}
+
+/* Menu section text */
+.menu-category p,
+.menu-note p {
+    color: #475569;
+}
+
+/* Getting Here section - ensure text is readable */
+.getting-here-content .route-card p:not(.highlight) {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Culture section text */
+.culture-text p {
+    color: #475569;
+}
+
+/* Feature items */
+.feature-item p {
+    color: #475569;
+}
+
+/* Turtle facts */
+.fact-label {
+    color: #475569;
 }
 
 /* ============================================
