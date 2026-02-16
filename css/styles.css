@@ -79,7 +79,7 @@ html, body {
     max-width: 100%;
 }
 
-img:not(.logo-img) {
+img:not(.logo-img):not(.brand-logo) {
     filter: var(--img-filter);
     border-radius: var(--radius-md);
     transition: transform var(--transition-slow), filter var(--transition-base);
@@ -88,7 +88,7 @@ img:not(.logo-img) {
     display: block;
 }
 
-img:not(.logo-img):hover {
+img:not(.logo-img):not(.brand-logo):hover {
     transform: scale(1.05);
     filter: var(--img-filter-hover);
 }
@@ -410,6 +410,28 @@ ul {
     z-index: 2;
     max-width: 900px;
     padding: var(--spacing-md);
+}
+
+.hero-brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.brand-mark {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 999px;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: none;
+    border-radius: 0;
 }
 
 .hero-kicker {
@@ -1150,12 +1172,17 @@ ul {
     margin-bottom: var(--spacing-sm);
 }
 
+.route-card p,
+.route-card li {
+    color: #475569 !important;
+}
+
 .route-details {
-    color: var(--white);
+    color: var(--text-mid);
 }
 
 .route-details p {
-    color: rgba(255, 255, 255, 0.95);
+    color: #475569;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -1166,7 +1193,7 @@ ul {
 
 .route-details .highlight {
     font-weight: 600;
-    color: var(--sand-warm);
+    color: var(--ocean-deep);
     font-size: 1.125rem;
 }
 
@@ -1177,7 +1204,7 @@ ul {
 }
 
 .route-details li {
-    color: var(--white);
+    color: #475569;
     margin-bottom: var(--spacing-xs);
 }
 
@@ -1391,6 +1418,14 @@ ul {
         margin-bottom: var(--spacing-md);
     }
 
+    .brand-mark {
+        padding: 0.5rem 0.9rem;
+    }
+
+    .brand-logo {
+        max-width: 120px;
+    }
+
     .hero-kicker {
         letter-spacing: 0.25em;
     }
@@ -1595,6 +1630,14 @@ ul {
     
     .hero-subtitle {
         font-size: clamp(0.875rem, 4vw, 1.125rem);
+    }
+
+    .brand-mark {
+        padding: 0.45rem 0.75rem;
+    }
+
+    .brand-logo {
+        max-width: 110px;
     }
 
     .hero-kicker {
