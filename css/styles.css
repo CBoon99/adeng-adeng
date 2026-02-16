@@ -886,12 +886,12 @@ img[alt*="Logo"] {
 }
 
 .location-card h3 {
-    color: var(--ocean-deep);
+    color: #0f172a !important;
     margin-bottom: var(--spacing-sm);
 }
 
 .location-card p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #334155 !important;
 }
 
 /* ============================================
@@ -1794,20 +1794,34 @@ img[alt*="Logo"] {
    TEXT CONTRAST FIXES - Ensure all text is readable
    ============================================ */
 
+/* NUCLEAR OPTION: Force dark text on ALL cards with light backgrounds */
+.card p,
+.location-card p,
+.activity-card p,
+.offer-card p,
+.attraction-card p,
+.feature-card p,
+.info-card p,
+.reason-card p,
+.why-card p,
+[class*="card"] p {
+    color: #334155 !important;
+}
+
 /* All paragraphs on light backgrounds */
 section:not(.hero):not(.cidomo-section):not(.diving-section):not(.location-section) p {
-    color: #475569;
+    color: #334155 !important;
 }
 
 /* Lists on light backgrounds */
 section:not(.hero):not(.cidomo-section):not(.diving-section):not(.location-section) li {
-    color: #334155;
+    color: #334155 !important;
 }
 
 /* Menu section text */
 .menu-category p,
 .menu-note p {
-    color: #475569;
+    color: #475569 !important;
 }
 
 /* Getting Here section - ensure text is readable */
@@ -1817,17 +1831,34 @@ section:not(.hero):not(.cidomo-section):not(.diving-section):not(.location-secti
 
 /* Culture section text */
 .culture-text p {
-    color: #475569;
+    color: #475569 !important;
 }
 
 /* Feature items */
 .feature-item p {
-    color: #475569;
+    color: #475569 !important;
 }
 
 /* Turtle facts */
 .fact-label {
-    color: #475569;
+    color: #475569 !important;
+}
+
+/* Base body text - dark */
+body p {
+    color: #334155;
+}
+
+/* Only make text light on explicitly dark sections */
+.hero p,
+.hero .hero-subtitle,
+.hero .hero-location,
+.cidomo-section p,
+.diving-section p,
+.location-section > .container > .section-header p,
+.location-section > .container > .section-subtitle,
+footer p {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* ============================================
