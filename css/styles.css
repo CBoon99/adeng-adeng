@@ -442,7 +442,7 @@ ul {
     justify-content: center;
     background-image: 
         linear-gradient(180deg, rgba(12,74,110,0.4) 0%, rgba(12,74,110,0.7) 100%),
-        url('../images/hero/hero-main.jpg');
+        url('../Assets/Gili Meno Beach.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -613,6 +613,59 @@ ul {
     bottom: 0;
     background: linear-gradient(135deg, var(--ocean-pale) 0%, var(--ocean-light) 100%);
     z-index: -1;
+}
+
+/* Beach Bar Hero Section */
+.beach-bar-hero {
+    margin: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, var(--ocean-pale) 0%, var(--white) 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.beach-bar-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.beach-bar-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+}
+
+.beach-bar-text h3 {
+    color: var(--ocean-deep);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.beach-bar-cta {
+    margin-top: var(--spacing-md);
+}
+
+.coming-soon-section {
+    margin-top: var(--spacing-xl);
+}
+
+.coming-soon-title {
+    text-align: center;
+    color: var(--text-mid);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 600;
+}
+
+.coming-soon-card {
+    opacity: 0.85;
+    transition: opacity var(--transition-base);
+}
+
+.coming-soon-card:hover {
+    opacity: 1;
 }
 
 .offer-grid,
@@ -1358,6 +1411,19 @@ ul {
     
     .fact-number {
         font-size: 1.5rem;
+    }
+    
+    .beach-bar-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .beach-bar-image {
+        order: 1;
+    }
+    
+    .beach-bar-text {
+        order: 2;
     }
     
     .offer-grid,
