@@ -1,0 +1,2 @@
+# Redirect www to non-www
+https://www.adeng-adeng.com/* https://adeng-adeng.com/:splat 301!
